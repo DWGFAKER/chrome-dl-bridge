@@ -1,0 +1,88 @@
+{
+ "steps": [
+  {
+   "form": "editable",
+   "installArgs": [
+    "-e",
+    "D:\\article4\\scratch\\chrome_downloader_pkg"
+   ],
+   "installReturncode": 0,
+   "tail": "95bb4ec1948b8950d86adb41ef1c630b70b619b09f0ff\nSuccessfully built chrome-downloader-client\nInstalling collected packages: chrome-downloader-client\nSuccessfully installed chrome-downloader-client-0.3.0\n",
+   "entrypoints": {
+    "chrome-dl --help": {
+     "returncode": 0,
+     "noTraceback": true,
+     "head": "usage: chrome-dl [-h] [--host HOST] [--port PORT] [--token TOKEN] |                  [--state-dir STATE_DIR] [--download-root DOWNLOAD_ROOT] |            "
+    },
+    "chrome-dl-mcp --version": {
+     "returncode": 0,
+     "noTraceback": true,
+     "head": "{\"name\":\"chrome-downloader-client\",\"version\":\"0.3.0\",\"supportedVersions\":[\"2026-07-28\",\"2025-11-25\"]} | "
+    },
+    "python -m chrome_downloader --help": {
+     "returncode": 0,
+     "noTraceback": true,
+     "head": "usage: chrome-dl [-h] [--host HOST] [--port PORT] [--token TOKEN] |                  [--state-dir STATE_DIR] [--download-root DOWNLOAD_ROOT] |            "
+    }
+   },
+   "packageOriginAndExtensionDir": {
+    "dir": "D:\\article4\\scratch\\chrome_downloader_pkg\\src\\chrome_downloader\\extension",
+    "missing": [],
+    "origin": "D:\\article4\\scratch\\chrome_downloader_pkg\\src\\chrome_downloader\\__init__.py"
+   },
+   "endToEnd": {
+    "downloadRootPassedToCli": "C:\\Users\\hrx\\AppData\\Local\\Temp\\cdl_smoke_run_editable__v15qklx\\files",
+    "returncode": 0,
+    "jobState": "COMPLETE",
+    "sha256Actual": "OK",
+    "outputTail": ",\n  \"sha256Expected\": \"a8ba1b487ec78b6574397681145302000778e892ae378ef1c193a63f580dd883\",\n  \"sha256Actual\": \"OK\",\n  \"createdAt\": 1792091614.2550578,\n  \"updatedAt\": 1792091616.794265,\n  \"host\": \"127.0.0.1:51583\",\n  \"pendingReconcile\": false,\n  \"stale\": false\n}\n",
+    "transportUsed": "stdlib-rfc6455",
+    "fakeChromeUsed": "链路层对手（不替真 Chrome 作证）",
+    "ok": true
+   },
+   "verdict": "PASS"
+  },
+  {
+   "form": "wheel",
+   "installArgs": [
+    "D:\\article4\\scratch\\chrome_downloader_pkg\\dist\\chrome_downloader_client-0.3.0-py3-none-any.whl"
+   ],
+   "installReturncode": 0,
+   "tail": "ticle4\\scratch\\chrome_downloader_pkg\\dist\\chrome_downloader_client-0.3.0-py3-none-any.whl\nInstalling collected packages: chrome-downloader-client\nSuccessfully installed chrome-downloader-client-0.3.0\n",
+   "entrypoints": {
+    "chrome-dl --help": {
+     "returncode": 0,
+     "noTraceback": true,
+     "head": "usage: chrome-dl [-h] [--host HOST] [--port PORT] [--token TOKEN] |                  [--state-dir STATE_DIR] [--download-root DOWNLOAD_ROOT] |            "
+    },
+    "chrome-dl-mcp --version": {
+     "returncode": 0,
+     "noTraceback": true,
+     "head": "{\"name\":\"chrome-downloader-client\",\"version\":\"0.3.0\",\"supportedVersions\":[\"2026-07-28\",\"2025-11-25\"]} | "
+    },
+    "python -m chrome_downloader --help": {
+     "returncode": 0,
+     "noTraceback": true,
+     "head": "usage: chrome-dl [-h] [--host HOST] [--port PORT] [--token TOKEN] |                  [--state-dir STATE_DIR] [--download-root DOWNLOAD_ROOT] |            "
+    }
+   },
+   "packageOriginAndExtensionDir": {
+    "dir": "C:\\Users\\hrx\\AppData\\Local\\Temp\\cdl_smoke_wheel_jq3ur4vh\\Lib\\site-packages\\chrome_downloader\\extension",
+    "missing": [],
+    "origin": "C:\\Users\\hrx\\AppData\\Local\\Temp\\cdl_smoke_wheel_jq3ur4vh\\Lib\\site-packages\\chrome_downloader\\__init__.py"
+   },
+   "endToEnd": {
+    "downloadRootPassedToCli": "C:\\Users\\hrx\\AppData\\Local\\Temp\\cdl_smoke_run_wheel_3icgzo1j\\files",
+    "returncode": 0,
+    "jobState": "COMPLETE",
+    "sha256Actual": "OK",
+    "outputTail": "\n  \"sha256Expected\": \"864bc55954e40f4cd97313285e4af52f323163e538d5514b7a1c2baa5b71765e\",\n  \"sha256Actual\": \"OK\",\n  \"createdAt\": 1792091630.0870051,\n  \"updatedAt\": 1792091632.6048412,\n  \"host\": \"127.0.0.1:51630\",\n  \"pendingReconcile\": false,\n  \"stale\": false\n}\n",
+    "transportUsed": "stdlib-rfc6455",
+    "fakeChromeUsed": "链路层对手（不替真 Chrome 作证）",
+    "ok": true
+   },
+   "verdict": "PASS"
+  }
+ ],
+ "verdict": "PASS"
+}

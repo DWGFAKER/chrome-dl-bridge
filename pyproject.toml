@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chrome-downloader-client"
+version = "0.3.0"
+description = "让 Chrome 替你下载：本机 Bridge + 扩展搬运字节的零依赖客户端（Bridge/CLI/MCP 都不碰文件字节）"
+readme = { file = "src/chrome_downloader/README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+authors = [{ name = "article4 research-verify" }]
+keywords = ["chrome", "downloads", "websocket", "mcp", "egress-guard"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Internet",
+]
+# C3/P5：必装第三方依赖必须为空。aiohttp 只进 extras（Bridge 有零依赖降级实现）。
+dependencies = []
+
+[project.optional-dependencies]
+serve = ["aiohttp==3.14.2"]
+
+[project.scripts]
+chrome-dl = "chrome_downloader.cli:main"
+chrome-dl-mcp = "chrome_downloader.mcp_server:main"
+
+# 不写 [project.urls]：真实主页要等人决定发布范围（计划 §11-②）之后才有。
+# 留一个 example.invalid 之类的占位网址进元数据 = 造一个不存在的凭据，
+# 别人会去点、会引用它。宁缺不造。
+
+[tool.setuptools]
+license-files = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+chrome_downloader = [
+  "extension/*.json", "extension/*.js", "extension/*.html",
+  "README.md", "PROTOCOL.md", "NM_REMOVAL_NOTE.md", "requirements.txt",
+]
