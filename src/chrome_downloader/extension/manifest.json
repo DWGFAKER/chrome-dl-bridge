@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "chrome-dl-bridge",
+  "version": "0.2.0",
+  "description": "把下载交给浏览器做：接收本机程序的命令，用 chrome.downloads 取字节，只回传进度小纸条。零安装步骤，装了就能用。",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "downloads",
+    "alarms",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "下载桥状态",
+    "default_popup": "popup.html"
+  }
+}

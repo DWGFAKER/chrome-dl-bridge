@@ -1,0 +1,22 @@
+# chrome-dl-bridge v0.2 依赖
+#
+# 【结论：一个都不装也能跑。】
+# Bridge 的 WS 服务端有两套实现：
+#   1) aiohttp（装了就用它）
+#   2) 零依赖降级：标准库手写 RFC6455 + HTTP —— aiohttp 不在场时自动切换
+# 两条路共用同一份 RestApi / link_session / 账本 / 8192 帧上限，语义不漂移，
+# 用哪条写在 endpoint.json 的 transport 字段与 /v1/health 里，可自查。
+#
+# 想显式指定走降级路径（测试 W10 就是这么做的）：
+#   set CDL_TRANSPORT=stdlib   （Windows）  /  CDL_TRANSPORT=stdlib python bridge.py
+aiohttp==3.14.2
+
+# 只在跑"互通矩阵 W9"时会用到；交付代码不需要它。
+# websockets==15.0.1
+
+# 明确不装（违反计划 C2 / V10，装了就当审计失败处理）：
+#   playwright / selenium / pyppeteer / undetected —— 不做浏览器自动化、不碰 CDP
+#   requests / httpx / urllib3 / pycurl          —— Bridge 与 Agent 都不自己取文件字节
+#
+# 说明（001-F7 口径）：约束的准确表述是"Bridge/Agent 不得成为**文件字节**的传输通道"，
+# 不是"程序完全不许联网"——回环 HTTP/SSE 与必要的元数据请求是允许的。
