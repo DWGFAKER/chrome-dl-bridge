@@ -1,9 +1,5 @@
 # chrome-downloader-client (English)
 
-> 这份是**英文版说明**。断言"老奶奶友好文案"的那几条测试读的是
-> `src/chrome_downloader/README.md`（中文那份才是交付面正文），
-> 所以这里只镜像"怎么用"，**不**复制那套中文话术——两个真源早晚漂移。
-
 **Let Chrome do the downloading; let your program be the dispatcher.**
 The program only says "fetch this / how far along / stop". Not a single byte of file
 content passes through it — which is exactly why your browser-side accelerator still
